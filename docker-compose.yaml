@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  backend:
+    build: Backend
+    hostname: backend-host
+    volumes:
+      - ./Backend:/app
+    ports:
+      - "8500:8500"
+    networks:
+      - app-network
+  
+  frontend:
+    build: Frontend
+    hostname: frontend-host
+    volumes:
+      - ./Frontend:/app
+    environment:
+      - BACKEND_URL=http://backend-host:8500
+    ports:
+      - "8000:8000"
+    links:
+      - backend
+    depends_on:
+      - backend
+    networks:
+      - app-network
+networks:
+  app-network: {}

@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/submit', methods=['POST'])
 def submit():
     form_data = dict(request.json) 
-    collection.insert_one(form_data) #Accepts only dictionary --> NoSql works with json
+    collection.insert_one(form_data)
     return 'Data Added to mongoDB'
 
 @app.route('/data')
@@ -28,4 +28,4 @@ def data():
     }
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8500,debug=True)
+    app.run(host='0.0.0.0', port=8500,debug=True)

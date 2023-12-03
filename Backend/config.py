@@ -1,1 +1,1 @@
-MONGO = 'mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/?retryWrites=true&w=majority'
+MONGO='mongodb+srv://shradhaagarwal810:fcdBbsfGuJrzxk6Q@shradhalearn.nmfq8ks.mongodb.net/?retryWrites=true&w=majority'
