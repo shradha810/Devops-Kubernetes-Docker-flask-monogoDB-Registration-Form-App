@@ -1,9 +1,7 @@
 from flask import Flask, request
 import pymongo
 import os
-from config import *
 
-os.environ['MONGO'] = MONGO
 Mongo = os.environ.get('MONGO')
 client = pymongo.MongoClient(Mongo)
 ### cluster:ShradhaLearn database:test collection:flask-signup ###
