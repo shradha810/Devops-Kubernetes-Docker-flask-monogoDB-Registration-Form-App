@@ -6,6 +6,8 @@ services:
     hostname: backend-host
     volumes:
       - ./Backend:/app
+    environment:
+      - MONGO=mongodb+srv://shradhaagarwal810:<PASSWORD>@shradhalearn.nmfq8ks.mongodb.net/?retryWrites=true&w=majority
     ports:
       - "8500:8500"
     networks:
