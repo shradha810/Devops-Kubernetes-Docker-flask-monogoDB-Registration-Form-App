@@ -16,6 +16,7 @@ I have also established the above Flask-based application using AWS services, sp
 
 ECR Setup:
 Two repositories were created in Amazon ECR, namely flask-backend and flask-frontend. Docker images were pushed to these repositories, containing the backend and frontend components of the Flask application.
+![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/19ceee80-1e65-43c6-9dd7-26f9d31d7c13)
 
 
 ECS Cluster Creation:
