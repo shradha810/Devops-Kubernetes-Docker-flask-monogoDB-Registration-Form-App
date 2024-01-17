@@ -22,17 +22,18 @@ Two repositories were created in Amazon ECR, namely flask-backend and flask-fron
 ECS Cluster Creation:
 A new ECS cluster named flask-application was created with default networking settings.
 The infrastructure was set to use AWS Fargate, providing serverless container management.
+![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/94514b80-03b4-428a-ae72-3f8efff3ef37)
 
 
 Task Definition:
 A task definition named flask-application was defined, specifying the containers and their configurations.
+Task Execution Role: Configured to enable ECS access to the ECR repository
 
 Container 1 (Backend):
 Name: backend
 Image URI: Obtained from the flask-backend ECR repository
 Port Mapping: Container port 8500, TCP, with the application protocol set to HTTP
 Environment: AWS Fargate
-Task Execution Role: Configured to enable ECS access to the ECR repository
 
 Container 2 (Frontend):
 Name: frontend
@@ -40,7 +41,7 @@ Image URI: Obtained from the flask-frontend ECR repository
 Port Mapping: Container port 8000, TCP
 Environment Variable: BACKEND_URL set to http://localhost:8500
 Environment: AWS Fargate
-Task Execution Role: Configured to enable ECS access to the ECR repository
+![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/506bdf22-cb6c-4d61-951a-5223f2c1cf26)
 
 
 Service Creation:
