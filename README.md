@@ -46,3 +46,4 @@ Environment: AWS Fargate
 
 Service Creation:
 A service named application-service was established as an ECS application type (replica). The task definition family flask-application with revision 1 (latest) was associated with this service. The service was configured to maintain one desired task, ensuring a single running instance of the application.
+![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/d7159705-f5f2-4d65-abc2-046b0f1a391f)
