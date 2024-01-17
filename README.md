@@ -8,6 +8,8 @@ To run the application,
 You can see all the documents in the collections: https://cloud.mongodb.com/ -> database -> ShradhaLearn cluster -> Collections
 2) docker-compose up
 
+![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/08d1ea8d-3948-4250-b076-f8605a316145)
+
 
 # Part - 2
 I have also established the above Flask-based application using AWS services, specifically Amazon Elastic Container Registry (ECR), Amazon Elastic Container Service (ECS) with AWS Fargate.
