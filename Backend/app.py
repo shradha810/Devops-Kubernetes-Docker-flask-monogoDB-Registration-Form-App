@@ -1,14 +1,18 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import pymongo
 import os
 
-Mongo = os.environ.get('MONGO')
+Mongo = os.environ.get('MONGO', "mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/")
 client = pymongo.MongoClient(Mongo)
 ### cluster:ShradhaLearn database:test collection:flask-signup ###
 db = client.test
 collection = db['flask-signup']
 
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return jsonify({'message': 'Backend is running'})
 
 @app.route('/submit', methods=['POST'])
 def submit():

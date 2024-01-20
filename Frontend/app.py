@@ -3,7 +3,7 @@ from datetime import datetime
 import requests
 import os
 
-BACKEND_URL = os.environ.get('BACKEND_URL')
+BACKEND_URL = os.environ.get('BACKEND_URL','http://localhost:8500')
 
 app = Flask(__name__)
 @app.route('/')

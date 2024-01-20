@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-backend
+spec:
+  selector:
+    matchLabels:
+      app: project-backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: project-backend
+    spec:
+      containers:
+      - name: project-backend
+        image: docker.io/shradhaagarwal810/project-backend
+        ports:
+        - containerPort: 8500
+        env:
+        - name: MONGO
+          value: mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/?retryWrites=true&w=majority
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-backend
+spec:
+  selector:
+    app: project-backend
+  ports:
+  - port: 8500
+    targetPort: 8500
