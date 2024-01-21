@@ -53,28 +53,28 @@ A service named application-service was established as an ECS application type (
 Scalable deployment of a web application is enabled with a frontend and backend, facilitating communication between them in a Kubernetes cluster. The services ensure proper networking, while environment variables streamline backend connection configurations. Moreover, secret is used to add a layer of obscurity, thus hiding the information from casual/ accidential visibility but doesn't provide strong encryption. Specifically, in the "project-backend" Deployment, the environment variable "MONGO" is set using the value obtained from the secret named "mongo-secret" and the key "MONGO."
 
 Create a scret.yaml for storing MONGO clound path:
-apiVersion: v1
-kind: Secret
-metadata:
-  name: mongo-secret
-type: Opaque
-data:
-  MONGO: <base 64 encoded MONGO path for mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/>
-
-cd .\Backend\
-docker tag backend shradhaagarwal810/project-backend
-docekr push shradhaagarwal810/project-backend
-cd ..
-cd .\Frontend\
-docker build -t frontend .
-docker tag frontend shradhaagarwal810/project-frontend
-docker push shradhaagarwal810/project-frontend
-
-C:\Users\Admin\Desktop> kind create cluster --name devops --config kind-config.yaml
-kubectl cluster-info --context kind-devops
-C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
-kubectl port-forward svc/project-frontend 7000:8000
-kubectl port-forward svc/project-backend 7500:8500
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: mongo-secret
+  type: Opaque
+  data:
+    MONGO: <base 64 encoded MONGO path for mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/>
+  
+  cd .\Backend\
+  docker tag backend shradhaagarwal810/project-backend
+  docekr push shradhaagarwal810/project-backend
+  cd ..
+  cd .\Frontend\
+  docker build -t frontend .
+  docker tag frontend shradhaagarwal810/project-frontend
+  docker push shradhaagarwal810/project-frontend
+  
+  C:\Users\Admin\Desktop> kind create cluster --name devops --config kind-config.yaml
+  kubectl cluster-info --context kind-devops
+  C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
+  kubectl port-forward svc/project-frontend 7000:8000
+  kubectl port-forward svc/project-backend 7500:8500
 
 http://localhost:7000
 http://localhost:7500
