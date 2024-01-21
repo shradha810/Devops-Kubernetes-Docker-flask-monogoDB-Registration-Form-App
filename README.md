@@ -53,7 +53,7 @@ A service named application-service was established as an ECS application type (
 Scalable deployment of a web application is enabled with a frontend and backend, facilitating communication between them in a Kubernetes cluster. The services ensure proper networking, while environment variables streamline backend connection configurations. Moreover, secret is used to add a layer of obscurity, thus hiding the information from casual/ accidential visibility but doesn't provide strong encryption. Specifically, in the "project-backend" Deployment, the environment variable "MONGO" is set using the value obtained from the secret named "mongo-secret" and the key "MONGO."
 
 Create a scret.yaml for storing MONGO clound path:
-'''
+```
 
 apiVersion: v1
 kind: Secret
@@ -78,7 +78,7 @@ C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-
 kubectl port-forward svc/project-frontend 7000:8000
 kubectl port-forward svc/project-backend 7500:8500
 
-'''
+```
 http://localhost:7000
 http://localhost:7500
 ![Untitled (23)](https://github.com/shradha810/Devops-project/assets/60320258/05cb619a-b8d2-4c99-9da7-4de61dd676d1)
