@@ -64,11 +64,10 @@ kubectl port-forward svc/project-frontend 7000:8000
 kubectl port-forward svc/project-backend 7500:8500
 http://localhost:7000
 http://localhost:7500
+![Untitled (23)](https://github.com/shradha810/Devops-project/assets/60320258/05cb619a-b8d2-4c99-9da7-4de61dd676d1)
+![Untitled (24)](https://github.com/shradha810/Devops-project/assets/60320258/b8ee6ec1-7ba7-4c36-80a7-9beec3b1b860)
+![Untitled (25)](https://github.com/shradha810/Devops-project/assets/60320258/0027d964-446e-4d67-b12e-2806d5c0296a)
+![Untitled (26)](https://github.com/shradha810/Devops-project/assets/60320258/86de36f8-7b28-47d5-abb8-71773daa5e55)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/51d57a19-2f55-4453-b908-51a3032a7631/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/e7e012db-3a2c-44ea-a523-445435b040b5/Untitled.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/de62ec03-7b65-4c4e-8fb5-7532ab347c4e/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/d5c10c38-8a9c-41bb-b9bf-cb7e27189ae3/Untitled.png)
