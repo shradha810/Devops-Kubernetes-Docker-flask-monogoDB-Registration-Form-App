@@ -10,8 +10,7 @@ You can see all the documents in the collections: https://cloud.mongodb.com/ -> 
 
 ![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/08d1ea8d-3948-4250-b076-f8605a316145)
 
-
-# Part - 2
+# Part - 2 [ECR, ECS]
 I have also established the above Flask-based application using AWS services, specifically Amazon Elastic Container Registry (ECR), Amazon Elastic Container Service (ECS) with AWS Fargate.
 
 ECR Setup:
@@ -50,3 +49,26 @@ A service named application-service was established as an ECS application type (
 
 ![image](https://github.com/shradha810/Docker-flask-monogoDB-Registration-Form-App/assets/60320258/bc1217da-9119-46f7-a789-88f9578a18ef)
 
+# Part-3 [Kubernetes]
+Create a scret.yaml for storing MONGO clound path:
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-secret
+type: Opaque
+data:
+  MONGO: <base 64 encoded MONGO path for mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/>
+
+kubectl appy -f /K8s
+kubectl port-forward svc/project-frontend 7000:8000 
+kubectl port-forward svc/project-backend 7500:8500
+http://localhost:7000
+http://localhost:7500
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/51d57a19-2f55-4453-b908-51a3032a7631/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/e7e012db-3a2c-44ea-a523-445435b040b5/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/de62ec03-7b65-4c4e-8fb5-7532ab347c4e/Untitled.png)
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/b38ad723-1a0c-411d-a45f-8543b6c8927f/d5c10c38-8a9c-41bb-b9bf-cb7e27189ae3/Untitled.png)
