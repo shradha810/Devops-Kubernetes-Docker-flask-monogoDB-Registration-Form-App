@@ -1,0 +1,28 @@
+cd .\Backend\
+docker tag backend shradhaagarwal810/project-backend
+docker push shradhaagarwal810/project-backend
+cd ..
+cd .\Frontend\
+docker build -t frontend .
+docker tag frontend shradhaagarwal810/project-frontend
+docker push shradhaagarwal810/project-frontend
+
+cd C:\Users\Admin\Desktop
+cat kind-config.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+
+kind create cluster --name devops --config kind-config.yaml
+kubectl cluster-info --context kind-devops
+C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
+kubectl get all
+kubectl port-forward svc/project-frontend 7000:8000
+kubectl port-forward svc/project-backend 7500:8500
+
+Extra:
+start kind containers in docker desktop as it gets stopped when laptop shuts down
+kind delete cluster --name devops
+kubectl delete service/project-backend service/project-frontend deployment.apps/project-backend deployment.apps/project-frontend secret/mongo-secret
