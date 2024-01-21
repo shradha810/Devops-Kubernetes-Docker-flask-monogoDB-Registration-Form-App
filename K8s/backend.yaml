@@ -19,8 +19,10 @@ spec:
         - containerPort: 8500
         env:
         - name: MONGO
-          value: mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/?retryWrites=true&w=majority
-
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: MONGO
 ---
 apiVersion: v1
 kind: Service
