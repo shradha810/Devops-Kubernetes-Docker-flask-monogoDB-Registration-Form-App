@@ -78,9 +78,9 @@ C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-
 kubectl port-forward svc/project-frontend 7000:8000
 kubectl port-forward svc/project-backend 7500:8500
 
-```
 http://localhost:7000
 http://localhost:7500
+```
 ![Untitled (23)](https://github.com/shradha810/Devops-project/assets/60320258/05cb619a-b8d2-4c99-9da7-4de61dd676d1)
 ![Untitled (24)](https://github.com/shradha810/Devops-project/assets/60320258/b8ee6ec1-7ba7-4c36-80a7-9beec3b1b860)
 ![Untitled (25)](https://github.com/shradha810/Devops-project/assets/60320258/0027d964-446e-4d67-b12e-2806d5c0296a)
