@@ -61,9 +61,21 @@ type: Opaque
 data:
   MONGO: <base 64 encoded MONGO path for mongodb+srv://shradhaagarwal810:<Password>@shradhalearn.nmfq8ks.mongodb.net/>
 
-kubectl appy -f /K8s
-kubectl port-forward svc/project-frontend 7000:8000 
+cd .\Backend\
+docker tag backend shradhaagarwal810/project-backend
+docekr push shradhaagarwal810/project-backend
+cd ..
+cd .\Frontend\
+docker build -t frontend .
+docker tag frontend shradhaagarwal810/project-frontend
+docker push shradhaagarwal810/project-frontend
+
+C:\Users\Admin\Desktop> kind create cluster --name devops --config kind-config.yaml
+kubectl cluster-info --context kind-devops
+C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
+kubectl port-forward svc/project-frontend 7000:8000
 kubectl port-forward svc/project-backend 7500:8500
+
 http://localhost:7000
 http://localhost:7500
 ![Untitled (23)](https://github.com/shradha810/Devops-project/assets/60320258/05cb619a-b8d2-4c99-9da7-4de61dd676d1)
