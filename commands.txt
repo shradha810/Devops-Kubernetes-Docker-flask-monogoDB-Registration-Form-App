@@ -20,10 +20,11 @@ kind create cluster --name devops --config kind-config.yaml
 kubectl cluster-info --context kind-devops
 C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
 kubectl get all
-kubectl port-forward svc/project-frontend 7000:8000
 kubectl port-forward svc/project-backend 7500:8500
+kubectl port-forward svc/project-frontend 7000:8000
 
 Extra:
 start kind containers in docker desktop as it gets stopped when laptop shuts down
 kind delete cluster --name devops
 kubectl delete service/project-backend service/project-frontend deployment.apps/project-backend deployment.apps/project-frontend secret/mongo-secret
+docker rmi project-frontend project-backend shradhaagarwal810/project-frontend shradhaagarwal810/project-backend
