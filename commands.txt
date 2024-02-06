@@ -18,6 +18,16 @@ nodes:
 
 kind create cluster --name devops --config kind-config.yaml
 kubectl cluster-info --context kind-devops
+
+[ Create a mongo-secret.yaml file inside K8s with content:
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongo-secret
+type: Opaque
+data:
+  MONGO: <base 64 encoded of URL mongodb+srv://shradhaagarwal810:<PASSWORD>@shradhalearn.nmfq8ks.mongodb.net/>
+]
 C:\Users\Admin\Desktop\Devops\flask-k8s\Docker-flask-monogoDB-Registration-Form-App\K8s> kubectl apply -f .
 kubectl get all
 kubectl port-forward svc/project-backend 7500:8500
