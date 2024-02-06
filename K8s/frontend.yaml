@@ -19,7 +19,7 @@ spec:
         - containerPort: 8000
         env:
         - name: BACKEND_URL
-          value: http://project-backend.default.svc.cluster.local
+          value: http://project-backend:8500
 
 ---
 apiVersion: v1
